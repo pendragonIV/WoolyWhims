@@ -21,6 +21,13 @@ public class GameScene : MonoBehaviour
     private Button levelButton;
     [SerializeField]
     private Slider time;
+    [SerializeField]
+    private Text levelText;
+
+    private void Start()
+    {
+        levelText.text = "LEVEL " + (LevelManager.instance.currentLevelIndex + 1);
+    }
 
     public void ShowPausePanel()
     {
